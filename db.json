@@ -1,0 +1,33 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "EXPLORING ES6",
+            "image": "https://d2sofvawe08yqg.cloudfront.net/exploring-es6/s_hero?1620468605",
+            "author": "Axel Rauschmayer",
+            "description": "An in-depth book on ECMAScript 6, for JavaScript programmers."
+        },
+        {
+            "id": 1,
+            "title": "EXPLORING ES6",
+            "image": "https://d2sofvawe08yqg.cloudfront.net/exploring-es6/s_hero?1620468605",
+            "author": "Axel Rauschmayer",
+            "description": "An in-depth book on ECMAScript 6, for JavaScript programmers."  
+        },
+        {
+            "id": 1,
+            "title": "EXPLORING ES6",
+            "image": "https://d2sofvawe08yqg.cloudfront.net/exploring-es6/s_hero?1620468605",
+            "author": "Axel Rauschmayer",
+            "description": "An in-depth book on ECMAScript 6, for JavaScript programmers."  
+        },
+        {
+            "id": 1,
+            "title": "EXPLORING ES6",
+            "image": "https://d2sofvawe08yqg.cloudfront.net/exploring-es6/s_hero?1620468605",
+            "author": "Axel Rauschmayer",
+            "description": "An in-depth book on ECMAScript 6, for JavaScript programmers."  
+        }
+
+    ]
+}
