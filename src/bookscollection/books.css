@@ -1,0 +1,14 @@
+.container{
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    border: 3%;
+}
+.booksContainer {
+    box-shadow: 2px -1px 12px 2px #1E90FF;
+    max-width: 300px;
+    padding: 10px;
+    min-height: 100%
+}
