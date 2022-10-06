@@ -20,7 +20,7 @@ function NavBar() {
                         <NavLink to='/' className="nav-link">Home <span className="sr-only"></span></NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to='/books' className="nav-link" >Books</NavLink>
+                        <NavLink to='/books' className="nav-link" >Add Books</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to='/signin' className="nav-link">Sign In</NavLink>
