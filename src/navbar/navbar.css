@@ -9,6 +9,7 @@ body{
 
 .nav-link .fa{
     transition:all 1s;
+    padding: 50px;
 }
 
 .nav-link:hover .fa{
