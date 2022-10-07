@@ -69,6 +69,13 @@
       "description": "last test",
       "image": "https://rubyonrails.org/assets/images/opengraph.png",
       "id": 10
+    },
+    {
+      "title": "add",
+      "author": "obe",
+      "description": "book",
+      "image": "now",
+      "id": 11
     }
   ]
 }

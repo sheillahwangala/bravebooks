@@ -11,7 +11,7 @@ function AddBook({ onBookAdded }) {
     });
 
     const params = useParams();
-    const [id, setId] = useState(params.bookid);
+    const [id] = useState(params.bookid);
 
     useEffect(()=>{
         if(id){

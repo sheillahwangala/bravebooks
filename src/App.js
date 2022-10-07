@@ -14,26 +14,21 @@ function App() {
 
   const [books, setBooks] = useState([]);
   const [filteredBooks, setFilteredBooks] = useState([]);
-  const [loading, setLoading] = useState(false);
-  // const [bookAdded, setbookAdded] = useState(false);
-
   useEffect(() => {
-    setLoading(true);
     fetch("http://localhost:3000/books")
       .then((response) => response.json())
       .then(booksList => {
         setBooks(booksList);
         setFilteredBooks(booksList);
-        setLoading(false);
       });
   }, []);
 
-  function handleSearch(bookTitle) {
-    const filteredArray = books.filter((book) => {
-      return book.title.toLowerCase().includes(bookTitle.toLowerCase());
-    });
-    setBooks(filteredArray);
-  }
+  // function handleSearch(bookTitle) {
+  //   const filteredArray = books.filter((book) => {
+  //     return book.title.toLowerCase().includes(bookTitle.toLowerCase());
+  //   });
+  //   setBooks(filteredArray);
+  // }
 
   function bookwaskAdded(newBook) {
     setBooks([...books, newBook])
