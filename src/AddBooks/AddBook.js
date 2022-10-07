@@ -1,9 +1,9 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-// const apiHost = "http://localhost:3000/books"
 
-const onBookAdded = {
+const bookInfo = {
     title: '',
     author: '',
     description: '',
@@ -11,12 +11,7 @@ const onBookAdded = {
 }
 
 function AddBook({ onBookAdded }) {
-    const [formData, setFormData] = useState({
-        image: '',
-        title: '',
-        author: '',
-        description: ''
-    });
+    const [formData, setFormData] = useState(bookInfo);
 
     const params = useParams();
     const [id, setId] = useState(params.bookid)
@@ -27,6 +22,7 @@ function AddBook({ onBookAdded }) {
                 .then((resp) => resp.json())
                 .then(book => {
                     setFormData(book);
+                    alert("Book Added Successfully!");
                 })
         }
     }, [id]);
@@ -70,9 +66,9 @@ function AddBook({ onBookAdded }) {
             <div>
                 <input type="text" name="image" placeholder="image URL" value={formData.image} onChange={onInputChange} />
             </div>
-
+            <br></br>
             <div>
-                <button type="submit" >Add Book</button>
+                <button type="button" class="btn btn-primary">Add Book</button>
             </div>
         </form>
     );
