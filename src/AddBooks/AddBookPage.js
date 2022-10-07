@@ -6,7 +6,7 @@ function AddBooksPage() {
     return (
         <>
             <div className='d-inline-block flex-column'>
-                <div className='text-cente mx-auto'>Add New Book</div>
+                <h3 className='text-cente mx-auto'>Add New Book</h3>
                 <Outlet />
             </div>
             <AddBook />
