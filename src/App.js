@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Template from './template/Template';
 import BooksCollection from './bookscollection/BooksCollection';
 import AddBooksPage from './AddBooks/AddBookPage';
+import SignIn from './SignIn/SignIn';
 
 
 
@@ -13,30 +14,39 @@ function App() {
 
   const [books, setBooks] = useState([]);
   const [filteredBooks, setFilteredBooks] = useState([]);
-  // const [loading, setLoading] = useState(false);
-  const [bookAdded, setbookAdded] = useState(false);
+  const [loading, setLoading] = useState(false);
+  // const [bookAdded, setbookAdded] = useState(false);
 
   useEffect(() => {
-    // setLoading(true);
+    setLoading(true);
     fetch("http://localhost:3000/books")
       .then((response) => response.json())
-      .then(books => {
-        setBooks(books);
-        // setLoading(false);
+      .then(booksList => {
+        setBooks(booksList);
+        setFilteredBooks(booksList);
+        setLoading(false);
       });
   }, []);
 
+  function handleSearch(bookTitle) {
+    const filteredArray = books.filter((book) => {
+      return book.title.toLowerCase().includes(bookTitle.toLowerCase());
+    });
+    setBooks(filteredArray);
+  }
+
   function bookwaskAdded(newBook) {
-    setBooks([...books, newBook])    
+    setBooks([...books, newBook])
   }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Template>
-          <Routes>
+          <Routes>            
+            <Route path="/" index element={<BooksCollection books={filteredBooks} setBooks={setBooks}  />} />
             <Route path="/books" index element={<AddBooksPage onBookAdded={bookwaskAdded} />} />
-            <Route path="/" index element={<BooksCollection books={books} setBooks={setBooks} />} />
+            <Route path="/signin" index element={<SignIn />} />
           </Routes>
         </Template>
       </BrowserRouter>
