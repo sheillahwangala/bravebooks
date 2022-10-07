@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 function SignIn() {
 
-    const [formData, setFormData] = useState({ name: '', password: '' })
-    const { name, password } = formData;
+    const [formData, setFormData] = useState({ name: '', sname: '', password: '', email: '' })
+    const { name, sname, email, password } = formData;
     const navigate = useNavigate()
     const handleLogin = () => {
         if (!name || !password) {
             console.log('All field are required')
         }
-        else if (name === "Katana" && password === "test") {
+        else if (name === "sheila" && sname === "carah" && email === "sheilac@gmail.com" && password === "test1") {
             navigate('/');
         }
         else {
