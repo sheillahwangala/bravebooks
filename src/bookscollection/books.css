@@ -1,14 +1,15 @@
 .container{
-    max-width: 95%;
+    max-width: 98%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 20px;
-    border: 3%;
+    border: 4%;
 }
 .booksContainer {
-    box-shadow: 2px -1px 12px 2px #1E90FF;
+    box-shadow: 1px -1px 10px 1px #1E90FF;
     width: 250px;
     padding: 10px;
-    min-height: 300px
+    min-height: 300px;
+    font-size: smaller;
 }
