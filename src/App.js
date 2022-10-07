@@ -15,7 +15,7 @@ function App() {
   const [books, setBooks] = useState([]);
   const [filteredBooks, setFilteredBooks] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/books")
+    fetch("https://bravebooks-db.herokuapp.com/books")
       .then((response) => response.json())
       .then(booksList => {
         setBooks(booksList);

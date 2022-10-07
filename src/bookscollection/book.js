@@ -4,7 +4,7 @@ import React from 'react';
 function Book({ id, book, setBooks, title, image, author, description }) {
 
     function handleDelete () {
-        fetch(`http://localhost:3000/books/${book.id}`, {
+        fetch(`https://bravebooks-db.herokuapp.com/books${book.id}`, {
             method: "DELETE",
         })
         .then((resp) => resp.json())

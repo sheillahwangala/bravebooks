@@ -15,7 +15,7 @@ function AddBook({ onBookAdded }) {
 
     useEffect(()=>{
         if(id){
-            fetch(`http://localhost:3000/books/${id}`).then(resp=>resp.json()).then(book=>{
+            fetch(`https://bravebooks-db.herokuapp.com/books${id}`).then(resp=>resp.json()).then(book=>{
                 setFormData(book);
             })
         }
@@ -24,7 +24,7 @@ function AddBook({ onBookAdded }) {
     function handleAddBook(event) {
         event.preventDefault();
         console.log(formData);
-        fetch(`http://localhost:3000/books${id ? '/'+id : ''}`, { 
+        fetch(`https://bravebooks-db.herokuapp.com/books${id ? '/'+id : ''}`, { 
             body: JSON.stringify(formData), 
             method: id ? "PATCH" : "POST",
             headers:{
