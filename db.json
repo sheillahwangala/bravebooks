@@ -64,41 +64,11 @@
       "id": 9
     },
     {
-      "title": "hgfds",
-      "category": "qwert",
-      "description": "asdcfvbn",
-      "image": "mnbvc",
+      "title": "last",
+      "author": "me",
+      "description": "last test",
+      "image": "https://rubyonrails.org/assets/images/opengraph.png",
       "id": 10
-    },
-    {
-      "title": "eleven",
-      "category": "asd",
-      "description": "Zxcvbn",
-      "image": "jmhgf",
-      "id": 11
-    },
-    {
-      "title": "eleven",
-      "category": "asd",
-      "description": "Zxcvbn",
-      "image": "jmhgf",
-      "id": 12
-    },
-    {
-      "title": "five",
-      "author": "carah S",
-      "description": "erthjkmnbvc",
-      "image": "cxz",
-      "category": "des",
-      "id": 13
-    },
-    {
-      "title": "five",
-      "author": "carah S",
-      "description": "erthjkmnbvc",
-      "image": "cxz",
-      "category": "des",
-      "id": 14
     }
   ]
 }
