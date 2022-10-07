@@ -2,18 +2,17 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { useEffect, useState } from 'react';
-// import TopBar from './TopBar/TopBar';
 import Template from './template/Template';
 import BooksCollection from './bookscollection/BooksCollection';
 import AddBooksPage from './AddBooks/AddBookPage';
-// import BooksPage from './bookspage/BooksPage';
+
 
 
 
 function App() {
 
   const [books, setBooks] = useState([]);
-  // const [filteredBooks, setFilteredBooks] = useState([]);
+  const [filteredBooks, setFilteredBooks] = useState([]);
   // const [loading, setLoading] = useState(false);
   const [bookAdded, setbookAdded] = useState(false);
 
@@ -27,8 +26,8 @@ function App() {
       });
   }, []);
 
-  function bookwasAdded(newBook) {
-    setBooks([...books, newBook]);    
+  function bookwaskAdded(newBook) {
+    setBooks([...books, newBook])    
   }
 
   return (
@@ -36,7 +35,7 @@ function App() {
       <BrowserRouter>
         <Template>
           <Routes>
-        <Route path="/books" index element={<AddBooksPage onBookAdded={bookwasAdded}/>} />
+            <Route path="/books" index element={<AddBooksPage onBookAdded={bookwaskAdded} />} />
             <Route path="/" index element={<BooksCollection books={books} setBooks={setBooks} />} />
           </Routes>
         </Template>

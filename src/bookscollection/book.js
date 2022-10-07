@@ -1,6 +1,7 @@
 import './books.css'
+import React from 'react';
 
-function Book({ book, setBooks, title, image, author, description }) {
+function Book({ id, book, setBooks, title, image, author, description }) {
 
     function handleDelete () {
         fetch(`http://localhost:3000/books/${book.id}`, {
@@ -9,6 +10,7 @@ function Book({ book, setBooks, title, image, author, description }) {
         .then((resp) => resp.json())
         .then(() => {
             setBooks((books) => books.filter((selectBook) => selectBook.id !== book.id));
+            alert("Book Deleted");
         });
     }
 
@@ -21,7 +23,7 @@ function Book({ book, setBooks, title, image, author, description }) {
                 <p>{description}</p>
             </div>
             <div className="d-grid gap-2 d-md-flex justify-content-md-between">
-                <button className="btn btn-primary" type="button">Read</button>
+                <button className="btn btn-primary" type="button" >Read</button>
                 <button className="btn btn-secondary" type="button" onClick={handleDelete} >Delete</button>
             </div>
         </div>
